@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package stat;
+
+option go_package = "./proto";
+
+service StatService {
+  rpc RecordView(RecordViewRequest) returns (RecordViewResponse);
+}
+
+message RecordViewRequest {
+  string site_id = 1;
+  string referrer = 2;
+}
+
+message RecordViewResponse {
+  string status = 1;
+}

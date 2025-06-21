@@ -2,7 +2,7 @@
 
 This repository contains a minimal implementation of a SaaS platform where users can create their own web sites and subscribe to flexible plans. The project follows the [go-clean-template](https://github.com/evrone/go-clean-template) architecture and demonstrates how each service exposes both gRPC and HTTP endpoints.
 
-The current codebase only implements the **Auth Service** as a proof of concept. Other services share the same layout and will be added later.
+The codebase now includes skeleton implementations for **all core services** (auth, site, subscription, catalog and stat). Each service exposes matching gRPC and HTTP servers.
 
 ## Objective
 
@@ -98,9 +98,9 @@ subscription-platform/
 └── README.md
 ```
 
-## Running the Auth Service
+## Running the Services
 
-Build and run the example Auth service from the repository root:
+Each service can be launched individually. For example, to run the Auth service:
 
 ```bash
 # build dependencies
@@ -110,7 +110,16 @@ go build ./...
 go run ./services/auth-service
 ```
 
-The service listens on gRPC port `50051` and HTTP port `8081`.
+The Auth service listens on gRPC port `50051` and HTTP port `8081`.
+
+Other services expose similar endpoints on the following ports:
+
+| Service                | gRPC | HTTP |
+|------------------------|------|------|
+| `site-service`         | 50052 | 8082 |
+| `subscription-service` | 50053 | 8083 |
+| `catalog-service`      | 50054 | 8084 |
+| `stat-service`         | 50055 | 8085 |
 
 ---
 
