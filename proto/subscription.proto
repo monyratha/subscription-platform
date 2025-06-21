@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package subscription;
+
+option go_package = "./proto";
+
+service SubscriptionService {
+  rpc ActivatePlan(ActivatePlanRequest) returns (ActivatePlanResponse);
+}
+
+message ActivatePlanRequest {
+  string user_id = 1;
+  string plan_id = 2;
+}
+
+message ActivatePlanResponse {
+  string subscription_id = 1;
+}

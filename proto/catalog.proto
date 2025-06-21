@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package catalog;
+
+option go_package = "./proto";
+
+service CatalogService {
+  rpc CreateProduct(CreateProductRequest) returns (CreateProductResponse);
+}
+
+message CreateProductRequest {
+  string name = 1;
+  string description = 2;
+}
+
+message CreateProductResponse {
+  string product_id = 1;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package site;
+
+option go_package = "./proto";
+
+service SiteService {
+  rpc CreateSite(CreateSiteRequest) returns (CreateSiteResponse);
+}
+
+message CreateSiteRequest {
+  string name = 1;
+  string url = 2;
+}
+
+message CreateSiteResponse {
+  string site_id = 1;
+}
