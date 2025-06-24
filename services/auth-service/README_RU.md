@@ -9,7 +9,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/evrone/go-clean-template)](https://goreportcard.com/report/github.com/evrone/go-clean-template)
 [![codecov](https://codecov.io/gh/evrone/go-clean-template/branch/master/graph/badge.svg?token=XE3E0X3EVQ)](https://codecov.io/gh/evrone/go-clean-template)
 
-[![Web Framework](https://img.shields.io/badge/Fiber-Web%20Framework-blue)](https://github.com/gofiber/fiber)
+[![Web Framework](https://img.shields.io/badge/Gin-Web%20Framework-blue)](https://github.com/gin-gonic/gin)
 [![API Documentation](https://img.shields.io/badge/Swagger-API%20Documentation-blue)](https://github.com/swaggo/swag)
 [![Validation](https://img.shields.io/badge/Validator-Data%20Integrity-blue)](https://github.com/go-playground/validator)
 [![JSON Handling](https://img.shields.io/badge/Go--JSON-Fast%20Serialization-blue)](https://github.com/goccy/go-json)
@@ -35,7 +35,7 @@
 
 - AMQP RPC (на основе RabbitMQ в качестве [транспорта](https://github.com/rabbitmq/amqp091-go))
 - gRPC ([gRPC](https://grpc.io/) фреймворк на основе protobuf)
-- REST API ([Fiber](https://github.com/gofiber/fiber) фреймворк)
+- REST API ([Gin](https://github.com/gin-gonic/gin) фреймворк)
 
 ## Содержание
 
@@ -151,7 +151,7 @@ go run -tags migrate ./cmd/app
 
 - AMQP RPC (на основе RabbitMQ в качестве транспорта)
 - gRPC ([gRPC](https://grpc.io/) фреймворк на основе protobuf)
-- REST API ([Fiber](https://github.com/gofiber/fiber) фреймворк)
+- REST API ([Gin](https://github.com/gin-gonic/gin) фреймворк)
 
 Маршрутизаторы http сервера пишутся в едином стиле:
 
@@ -213,7 +213,7 @@ apiV2Group := app.Group("/v2")
 }
 ```
 
-Вместо [Fiber](https://github.com/gofiber/fiber) можно использовать любой другой http фреймворк.
+Вместо [Gin](https://github.com/gin-gonic/gin) можно использовать любой другой http фреймворк.
 
 В файле `router.go` над хэндлером написаны комментарии для генерации документации через
 swagger [swag](https://github.com/swaggo/swag).
